@@ -1,0 +1,11 @@
+@startuml Temperature
+
+class Temperatura{
+    -gradosCelcius : float
+    
+    +Temperatura(gradosCelcius : float)
+    +getGradosCelcius() : float
+    +setGradosCelcius(gradosCelcius : float) : void
+    +convertToFarenheit() : float
+}
+@enduml
