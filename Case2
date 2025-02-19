@@ -1,0 +1,26 @@
+@startuml Caso de estudio 2
+
+class Punto2D {
+    -coordX : double
+    -coordY : double
+
+    +Punto2D()
+    +Punto2D( x : double, y : double)
+    +getCoordX() : double
+    +setCoordX(coordX : double) : void
+    +getCoordY() : double
+    +setCoordY(coordY : double) : void
+}
+class Circunferencia{
+    -centro :Punto2D
+    -radio : double
+
+    +Circunferencia()
+    +Circunferencia(radio : double, x : double, y : double)
+    +Circunferencia(radio : double, centro : Punto2D)
+    +getCentro() : Punto2D
+    +setCento( centro : Punto2D) : void
+    +getRadio(): double
+    +setRadio(radio : double) : void
+}
+@enduml
