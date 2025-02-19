@@ -1,0 +1,16 @@
+@startuml Caso de estudio 1
+class Persona {
+    -nombre : string 
+    -apellidos : string
+    -yearNacimiento : int
+
+    +Persona(nombre : string, apellidos : string, yearNacimiento :int)
+    +getEdad(currentYear: int) : int
+    +getNombre() : string
+    +setNombre(nombre: string) : void
+    +getApellidos(apellidos: string)
+    +setApellidos(apelidos : string) : void
+    +getYearNacimiento(): int
+    +setYearNacimiento(yearNacimiento: int): void 
+}
+@enduml
