@@ -1,0 +1,80 @@
+@startuml Historia Clínica
+
+Patient "1" *-- "0...*" Image
+Patient "1" *-- "0...*" Disease
+Hospital "1" *-- "0..." Patient
+
+class Patient{
+    -id: String
+    -name: String
+    -lastName: String
+    -bornDate: Date
+    -sex: boolean
+    -weight: double
+    -height: double
+    -adress: String
+    -images: list <Image>
+    -deseases: list <Desease>
+
+    +Patient()
+    +Patient(Id:int, name: String, lastName: String, bornDate: Date, sex: boolean, weight: double, height: double, adress: String)
+    +getId(): String
+    +setId(Id: String):void
+    +getName(): String
+    +setName(name:String): void
+    +getLastname(): String
+    +setLastname(lastname: String): void
+    +getBornDate(): Date
+    +setBornDate(bornDate: Date): Date
+    +getSex(): boolean
+    +setSex(sex:boolean): void
+    +getWeight():double
+    +setWeight(weight:double):void
+    +getHeight(): double
+    +setHeight(height: double): void 
+    +getAdress(): String
+    +setAdress(adress: String): void
+    +addImages(Images image): void
+    +deleteImage(imageName: String): void
+    +addDesease(Deseases desease): void
+    +deleteDesease(deseaseName: String): void
+}
+class Image{
+    -imageName: String
+    -imageDate: Date
+    -imageType: String
+    -comments: String
+
+    +Image()
+    +Image(imageName: tring, imageDate: Date, imageType: String, comments: String)
+    +getImageName(): String
+    +getImageDate(): Date
+    +getImageType(): String
+    +getComments(): String
+}
+class Disease{
+    -name: String 
+    -foundDate: Date
+    -treatment: String
+
+    +Desease()
+    +Desease(name: String, foundDate: Date, treatment: String)
+    +getName(): String
+    +getFoundDate(): Date
+    +getTReatment(): String
+}
+class Hospital{
+    -patient: list <Patient>
+
+    +Hospital()
+    +Hospital(patient: list <Patient>)
+    +foundPatient(Id: String): Patient
+    +getHigest(): List <String>
+    +countWomanDengue(): int
+    +getOrderByName(): List <Patient>
+    +getOrderByWeight(): List <Patient>
+    +addPatient(Patient patient): void
+    +deletePatient(Id: String): void
+    +modifyPatient(Id: String): void
+}
+@enduml
