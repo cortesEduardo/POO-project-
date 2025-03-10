@@ -46,7 +46,7 @@ class Image{
     -comments: String
 
     +Image()
-    +Image(imageName: tring, imageDate: Date, imageType: String, comments: String)
+    +Image(imageName: String, imageDate: Date, imageType: String, comments: String)
     +getImageName(): String
     +getImageDate(): Date
     +getImageType(): String
